@@ -7,15 +7,28 @@ User.create([
 
 Medication.create([
   {
-    name: 'Novorapid'
+    name: 'Novorapid penfill',
+    variety: 'insulin',
+    delivery_method: 'injection'
   },
   {
-    name: 'Lantus'
+    name: 'Lantus penfill',
+    variety: 'insulin',
+    delivery_method: 'injection'
   },
   {
-    name: 'Metaformin'
+    name: 'Metaformin',
+    variety: 'Antidiabetic drug',
+    delivery_method: 'Pill'
+
   },
   {
-    name: 'Meglitinide'
+    name: 'Meglitinide',
+    variety: 'Antidiabetic drug',
+    delivery_method: 'Pill'
   }
   ])
+
+BgTest.create({
+  bg_result: 3.2
+  })

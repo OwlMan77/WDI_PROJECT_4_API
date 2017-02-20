@@ -168,3 +168,73 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Steveredgrave@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "Steveredgrave@famousdiabetics.com"], ["password_digest", "$2a$10$BPibFJGKvZ0cmtAZr37y1OZx8ebFIZJfuTV3d1OyGdSw/tuw2m3SO"], ["ideal_bg", "5.5"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halleberry@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "halleberry@famousdiabetics.com"], ["password_digest", "$2a$10$uBUw2MNgpLR1mxb/CscV4er2ZDnDcirDod7ZYImUaabolG2X0J/1G"], ["ideal_bg", "6.7"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "doriangregory@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "doriangregory@famousdiabetics.com"], ["password_digest", "$2a$10$UpcY2C4ydY0BaCmnPtFoMegc/LZBWeH.OQH6BBhTA7824IG6N3KrC"], ["ideal_bg", "7.2"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bretmichaels@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bretmichaels@famousdiabetics.com"], ["password_digest", "$2a$10$l8hTV6gTEs7GJPPQ4nlaLefLlEQqjemXBF8brWMrwFP2s7biK3Iu2"], ["ideal_bg", "8.2"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Novorapid penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lantus penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Metaformin"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Meglitinide"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-20 11:13:46 UTC], ["updated_at", 2017-02-20 11:13:46 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Steveredgrave@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halleberry@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "doriangregory@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bretmichaels@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Novorapid penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-20 11:14:01 UTC], ["updated_at", 2017-02-20 11:14:01 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lantus penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-20 11:14:01 UTC], ["updated_at", 2017-02-20 11:14:01 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Metaformin"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-20 11:14:01 UTC], ["updated_at", 2017-02-20 11:14:01 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Meglitinide"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-20 11:14:01 UTC], ["updated_at", 2017-02-20 11:14:01 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Jean-Marc/development/WDI_PROJECT_4_API/db/seeds.rb:32)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mMedication Load (1.3ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
