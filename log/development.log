@@ -1074,3 +1074,17 @@ To silence this deprecation warning, add the following:
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35mSQL (6.7ms)[0m  [1m[32mINSERT INTO "bg_tests" ("bg_result", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["bg_result", 3.2], ["user_id", 1], ["created_at", 2017-02-20 11:43:17 UTC], ["updated_at", 2017-02-20 11:43:17 UTC]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBgTest Load (0.7ms)[0m  [1m[34mSELECT  "bg_tests".* FROM "bg_tests" ORDER BY "bg_tests"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):7)
