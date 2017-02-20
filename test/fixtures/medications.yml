@@ -2,12 +2,10 @@
 
 one:
   name: MyString
-  total_basal: 
-  carbs_ratio: 
-  user: one
+  total_basal: 1.5
+  carbs_ratio: 1.5
 
 two:
   name: MyString
-  total_basal: 
-  carbs_ratio: 
-  user: two
+  total_basal: 1.5
+  carbs_ratio: 1.5

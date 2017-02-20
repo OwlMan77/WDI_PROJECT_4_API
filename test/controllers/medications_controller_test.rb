@@ -12,7 +12,7 @@ class MedicationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create medication" do
     assert_difference('Medication.count') do
-      post medications_url, params: { medication: { carbs_ratio: @medication.carbs_ratio, name: @medication.name, total_basal: @medication.total_basal, user_id: @medication.user_id } }, as: :json
+      post medications_url, params: { medication: { carbs_ratio: @medication.carbs_ratio, name: @medication.name, total_basal: @medication.total_basal } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class MedicationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update medication" do
-    patch medication_url(@medication), params: { medication: { carbs_ratio: @medication.carbs_ratio, name: @medication.name, total_basal: @medication.total_basal, user_id: @medication.user_id } }, as: :json
+    patch medication_url(@medication), params: { medication: { carbs_ratio: @medication.carbs_ratio, name: @medication.name, total_basal: @medication.total_basal } }, as: :json
     assert_response 200
   end
 
