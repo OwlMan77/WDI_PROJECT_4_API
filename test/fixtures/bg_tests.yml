@@ -3,11 +3,11 @@
 one:
   bg_result: 1.5
   date: 2017-02-20
-  time: 2017-02-20 10:40:54
-  user: one
+  time: 2017-02-20 12:04:13
+  user_id: one
 
 two:
   bg_result: 1.5
   date: 2017-02-20
-  time: 2017-02-20 10:40:54
-  user: two
+  time: 2017-02-20 12:04:13
+  user_id: two
