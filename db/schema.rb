@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(version: 20170220104054) do
 
   create_table "medications", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "variety"
+    t.string   "delivery_method"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "table_users_medications", force: :cascade do |t|
