@@ -12,7 +12,7 @@ class BgTestsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bg_test" do
     assert_difference('BgTest.count') do
-      post bg_tests_url, params: { bg_test: { bg_result: @bg_test.bg_result, date: @bg_test.date, time: @bg_test.time, user_id_id: @bg_test.user_id_id } }, as: :json
+      post bg_tests_url, params: { bg_test: { bg_result: @bg_test.bg_result, date: @bg_test.date, time: @bg_test.time, user_id: @bg_test.user_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class BgTestsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bg_test" do
-    patch bg_test_url(@bg_test), params: { bg_test: { bg_result: @bg_test.bg_result, date: @bg_test.date, time: @bg_test.time, user_id_id: @bg_test.user_id_id } }, as: :json
+    patch bg_test_url(@bg_test), params: { bg_test: { bg_result: @bg_test.bg_result, date: @bg_test.date, time: @bg_test.time, user_id: @bg_test.user_id } }, as: :json
     assert_response 200
   end
 
