@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  bg_result: 1.5
+  bg_result: 
   date: 2017-02-20
-  time: 2017-02-20 10:08:45
-  user_id: one
+  time: 2017-02-20 10:21:34
+  user: one
 
 two:
-  bg_result: 1.5
+  bg_result: 
   date: 2017-02-20
-  time: 2017-02-20 10:08:45
-  user_id: two
+  time: 2017-02-20 10:21:34
+  user: two

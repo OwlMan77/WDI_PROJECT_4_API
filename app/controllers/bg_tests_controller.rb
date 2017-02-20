@@ -46,6 +46,6 @@ class BgTestsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bg_test_params
-      params.require(:bg_test).permit(:bg_result, :date, :time, :user_id_id)
+      params.require(:bg_test).permit(:bg_result, :date, :time, :user_id)
     end
 end
