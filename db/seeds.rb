@@ -30,5 +30,6 @@ Medication.create([
   ])
 
 BgTest.create({
-  bg_result: 3.2
+  bg_result: 3.2,
+  user_id: 1
   })
