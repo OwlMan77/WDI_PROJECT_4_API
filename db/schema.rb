@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216143730) do
+ActiveRecord::Schema.define(version: 20170220101016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bg_tests", force: :cascade do |t|
+    t.float    "bg_result"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bg_tests_on_user_id", using: :btree
+  end
+
+  create_table "medications", force: :cascade do |t|
+    t.string   "name"
+    t.float    "total_basal"
+    t.float    "carbs_ratio"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "table_users_medications", force: :cascade do |t|
+    t.string "user_id"
+    t.string "medication_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -22,4 +45,5 @@ ActiveRecord::Schema.define(version: 20170216143730) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "bg_tests", "users"
 end
