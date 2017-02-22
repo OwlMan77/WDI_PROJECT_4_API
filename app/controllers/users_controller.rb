@@ -21,17 +21,22 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.medications << Medication.find(params[:medication_id])
       if @user.update(user_params)
+        if params[:medication_id]
+          @user.medications << Medication.find(params[:medication_id])
+        end
         render json: @user
       else
         render json: @user.errors, status: :unprocessable_entity
       end
-    end
+
   end
 
   def destroy
-    @bg_test.destroy
+    @bg_test = BgTest.all
+    # Deletes all Bgs belonging to user
+    @bg_test.where(:user_id == params[:id]).destroy_all
+    @user.destroy
   end
   private
   private
