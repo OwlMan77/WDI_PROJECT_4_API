@@ -1,4 +1,5 @@
 User.destroy_all
+BgTest.destroy_all
 
 User.create([
   {first_name:'Steve', last_name:'Redgrave', email: 'Steveredgrave@famousdiabetics.com', password:'password', ideal_bg: 5.5 },
@@ -29,3 +30,16 @@ Medication.create([
     delivery_method: 'Pill'
   }
   ])
+
+BgTest.create!([
+  {
+    bg_result: 3.2,
+    date: '',
+    time: '',
+    user_id: 1
+  }
+  ])
+
+u1 = User.find(2)
+
+u1.medications << Medication.find(1)
