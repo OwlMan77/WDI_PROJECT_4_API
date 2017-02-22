@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(@current_user)
     render json: @user
   end
 
@@ -33,16 +33,16 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @bg_test = BgTest.all
-    # Deletes all Bgs belonging to user
-    @bg_test.where(:user_id == params[:id]).destroy_all
+    @bg_test = BgTest.where(user_id: @current_user)
+    # Deletes all Bgs belonging to User
+    @bg_test.destroy_all
     @user.destroy
   end
   private
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find(@current_user)
   end
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)

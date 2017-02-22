@@ -3,7 +3,7 @@ class BgTestsController < ApplicationController
 
   # GET /bg_tests
   def index
-    @bg_tests = BgTest.all
+    @bg_tests = BgTest.where(user_id: @current_user)
 
     render json: @bg_tests
   end
