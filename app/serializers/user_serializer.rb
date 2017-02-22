@@ -1,3 +1,3 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :ideal_bg
+  attributes :first_name, :last_name, :id, :ideal_bg
 end

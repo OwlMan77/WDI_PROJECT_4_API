@@ -1,3 +1,4 @@
+User.destroy_all
 
 User.create([
   {first_name:'Steve', last_name:'Redgrave', email: 'Steveredgrave@famousdiabetics.com', password:'password', ideal_bg: 5.5 },
