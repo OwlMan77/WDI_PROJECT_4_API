@@ -10310,3 +10310,197 @@ DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`
 Completed 204 No Content in 15ms (ActiveRecord: 6.5ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (303.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_development"[0m
+  [1m[35m (288.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "wdi-project-4-api_test"[0m
+  [1m[35m (451.8ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_development" ENCODING = 'unicode'[0m
+  [1m[35m (285.3ms)[0m  [1m[35mCREATE DATABASE "wdi-project-4-api_test" ENCODING = 'unicode'[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7381167824530102995);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170216143730)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "ideal_bg" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170216143730"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMedications (20170220102955)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "medications" ("id" serial primary key, "name" character varying, "variety" character varying, "delivery_method" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220102955"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBgTests (20170220120413)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "bg_tests" ("id" serial primary key, "bg_result" float, "date" date, "time" time, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_6b21eb06fe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_bg_tests_on_user_id" ON "bg_tests"  ("user_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170220120413"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJoinTableUsersMedications (20170222124642)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "medications_users" ("user_id" integer NOT NULL, "medication_id" integer NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170222124642"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-22 19:04:03 UTC], ["updated_at", 2017-02-22 19:04:03 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7381167824530102995)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBgTest Load (1.1ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from <top (required)> at /Users/Jean-Marc/development/WDI_PROJECT_4_API/db/seeds.rb:2)
+  [1m[36mMedication Load (0.9ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Steveredgrave@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Steve"], ["last_name", "Redgrave"], ["email", "Steveredgrave@famousdiabetics.com"], ["password_digest", "$2a$10$M.9YvEB42Uwh7cXK3U.exO/Bnew87/N2RpnEaCgoJAt8sfisinBby"], ["ideal_bg", "5.5"], ["created_at", 2017-02-22 19:04:03 UTC], ["updated_at", 2017-02-22 19:04:03 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "halleberry@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Halle"], ["last_name", "Berry"], ["email", "halleberry@famousdiabetics.com"], ["password_digest", "$2a$10$p4HnAu2xJtRJKHkdWDx55uCizgR7w8m/hAXJHwr/PvyE6avPNCnVe"], ["ideal_bg", "6.7"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "doriangregory@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Dorian"], ["last_name", "Gregory"], ["email", "doriangregory@famousdiabetics.com"], ["password_digest", "$2a$10$gGOvzrcQaa8r91dseBl/X.WCAt/bqHdHAQXaACG/u2YXi8dTtFRjO"], ["ideal_bg", "7.2"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bretmichaels@famousdiabetics.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "ideal_bg", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Bret"], ["last_name", "Michaels"], ["email", "bretmichaels@famousdiabetics.com"], ["password_digest", "$2a$10$b0KvooUNX5lZTwsEvuIwxOBCEP6utQUzuSOtQN/zM3nWxl9saNZPm"], ["ideal_bg", "8.2"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Novorapid penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lantus penfill"], ["variety", "insulin"], ["delivery_method", "injection"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Metaformin"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "medications" ("name", "variety", "delivery_method", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Meglitinide"], ["variety", "Antidiabetic drug"], ["delivery_method", "Pill"], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "bg_tests" ("bg_result", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["bg_result", 3.2], ["user_id", 1], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "bg_tests" ("bg_result", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["bg_result", 3.2], ["user_id", 1], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bg_tests" ("bg_result", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["bg_result", 3.2], ["user_id", 2], ["created_at", 2017-02-22 19:04:04 UTC], ["updated_at", 2017-02-22 19:04:04 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.4ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" WHERE "medications"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "medications_users" ("user_id", "medication_id") VALUES ($1, $2)[0m  [["user_id", 2], ["medication_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for 127.0.0.1 at 2017-02-22 19:04:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"Steveredgrave@famousdiabetics.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"Steveredgrave@famousdiabetics.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Steveredgrave@famousdiabetics.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.7ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (64.9ms)
+Completed 200 OK in 232ms (Views: 63.9ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-22 19:04:39 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.9ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.2ms)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/bg_tests" for 127.0.0.1 at 2017-02-22 19:04:46 +0000
+Processing by BgTestsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/bg_tests_controller.rb:8)
+  [1m[36mBgTest Load (1.1ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.97ms)
+Completed 200 OK in 59ms (Views: 43.3ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/bg_tests" for 127.0.0.1 at 2017-02-22 23:33:15 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Jean-Marc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by BgTestsController#index as */*
+  Parameters: {"email"=>"Steveredgrave@famousdiabetics.com", "password"=>"[FILTERED]", "bg_test"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBgTest Load (0.8ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.92ms)
+Completed 200 OK in 75ms (Views: 31.7ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-22 23:33:22 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"email"=>"Steveredgrave@famousdiabetics.com", "password"=>"[FILTERED]", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.6ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.88ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-22 23:37:13 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"email"=>"Steveredgrave@famousdiabetics.com", "password"=>"[FILTERED]", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (37.34ms)
+Completed 200 OK in 82ms (Views: 46.3ms | ActiveRecord: 13.6ms)
+
+
