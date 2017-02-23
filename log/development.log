@@ -11102,3 +11102,94 @@ Processing by BgTestsController#create as */*
 Completed 201 Created in 7ms (Views: 1.0ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/bg_tests/" for 127.0.0.1 at 2017-02-23 01:43:06 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Jean-Marc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by BgTestsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "bg_test"=>{"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBgTest Load (0.7ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.16ms)
+Completed 200 OK in 97ms (Views: 48.7ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/bg_tests/" for 127.0.0.1 at 2017-02-23 01:44:01 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Jean-Marc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by BgTestsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "bg_test"=>{"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBgTest Load (0.6ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.19ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 15.9ms)
+
+
+  
+NoMethodError (undefined method `ukDate' for #<BgTest:0x007fb00695d798>
+Did you mean?  update
+               date
+               update!):
+  
+app/controllers/bg_tests_controller.rb:8:in `index'
+Started GET "/bg_tests/" for 127.0.0.1 at 2017-02-23 01:44:13 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Jean-Marc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by BgTestsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "bg_test"=>{"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBgTest Load (1.0ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.26ms)
+Completed 200 OK in 63ms (Views: 29.6ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/bg_tests/" for 127.0.0.1 at 2017-02-23 01:55:40 +0000
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in inherited at /Users/Jean-Marc/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:78)
+Processing by BgTestsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "bg_test"=>{"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBgTest Load (0.6ms)[0m  [1m[34mSELECT "bg_tests".* FROM "bg_tests" WHERE "bg_tests"."user_id" = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.22ms)
+Completed 200 OK in 75ms (Views: 37.7ms | ActiveRecord: 15.6ms)
+
+
