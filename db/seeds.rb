@@ -32,26 +32,6 @@ Medication.create([
   }
   ])
 
-BgTest.create!([
-  {
-    bg_result: 3.2,
-    date: '',
-    time: '',
-    user_id: 1
-  },
-  {
-    bg_result: 3.2,
-    date: '',
-    time: '',
-    user_id: 1
-  },
-  {
-    bg_result: 3.2,
-    date: '',
-    time: '',
-    user_id: 2
-  }
-  ])
 
 u1 = User.find(2)
 
