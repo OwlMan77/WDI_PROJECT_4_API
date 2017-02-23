@@ -1,6 +1,5 @@
 class BgTestSerializer < ActiveModel::Serializer
-  attributes :id, :bg_result, :date, :time
-  has_one :user_id
+  attributes :bg_result, :date, :time
   def date
     object.date.strftime("%m/%d/%Y")
   end
