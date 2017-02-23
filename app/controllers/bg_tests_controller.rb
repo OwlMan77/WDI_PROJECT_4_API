@@ -16,7 +16,7 @@ class BgTestsController < ApplicationController
   # POST /bg_tests
   def create
     @bg_test = BgTest.new(bg_test_params)
-
+    @bg_test.user = @current_user
     if @bg_test.save
       render json: @bg_test, status: :created, location: @bg_test
     else
