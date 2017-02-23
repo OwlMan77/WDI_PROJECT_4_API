@@ -17,6 +17,11 @@ class BgTestsController < ApplicationController
   def create
     @bg_test = BgTest.new(bg_test_params)
     @bg_test.user = @current_user
+    if @bg_test.time.nil? || @bg_test.date.nil?
+    @bg_test.time = Time.now
+    @bg_test.date = Date.today
+    end
+
     if @bg_test.save
       render json: @bg_test, status: :created, location: @bg_test
     else
