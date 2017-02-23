@@ -11193,3 +11193,722 @@ Processing by BgTestsController#index as */*
 Completed 200 OK in 75ms (Views: 37.7ms | ActiveRecord: 15.6ms)
 
 
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 01:59:29 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.1ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (1.2ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (52.03ms)
+Completed 200 OK in 123ms (Views: 65.7ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:00:15 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.8ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (1.3ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (1.4ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (78.16ms)
+Completed 200 OK in 124ms (Views: 81.0ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:00:29 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.67ms)
+Completed 200 OK in 82ms (Views: 46.4ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:01:24 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (1.1ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (55.19ms)
+Completed 200 OK in 123ms (Views: 62.5ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:07:22 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 16.8ms)
+
+
+  
+NoMethodError (undefined method `findby' for #<Class:0x007fb0045c3008>
+Did you mean?  find_by
+               find_by!
+               find):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:07:38 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (73.5ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" WHERE "medications"."user_id" = 1 LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 84.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_id does not exist
+LINE 1: SELECT  "medications".* FROM "medications" WHERE "medication...
+                                                         ^
+: SELECT  "medications".* FROM "medications" WHERE "medications"."user_id" = 1 LIMIT $1):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:09:02 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.4ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" WHERE "medications"."users_ids" = 1 LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 12.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.users_ids does not exist
+LINE 1: SELECT  "medications".* FROM "medications" WHERE "medication...
+                                                         ^
+: SELECT  "medications".* FROM "medications" WHERE "medications"."users_ids" = 1 LIMIT $1):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:09:16 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (40.96ms)
+Completed 200 OK in 78ms (Views: 44.4ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:09:49 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.9ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 9.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_ids does not exist
+LINE 1: SELECT  "medications".* FROM "medications" WHERE "medication...
+                                                         ^
+: SELECT  "medications".* FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:12:40 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.8ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 11.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_ids does not exist
+LINE 1: SELECT  "medications".* FROM "medications" WHERE "medication...
+                                                         ^
+: SELECT  "medications".* FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:12:58 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.7ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.12ms)
+Completed 200 OK in 72ms (Views: 38.3ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:13:23 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.8ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (1.0ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.05ms)
+Completed 200 OK in 77ms (Views: 42.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:14:50 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 8.5ms)
+
+
+  
+NoMethodError (undefined method `exists?' for #<MedicationsController:0x007fb00434f240>
+Did you mean?  exit):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:15:51 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 8.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_ids does not exist
+LINE 1: SELECT  1 AS one FROM "medications" WHERE "medications"."use...
+                                                  ^
+: SELECT  1 AS one FROM "medications" WHERE "medications"."user_ids" = 1 LIMIT $1):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:16:16 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.6ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (1.0ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers] No serializer found for resource: 2
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.67ms)
+Completed 200 OK in 106ms (Views: 60.1ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:16:51 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 7.7ms)
+
+
+  
+NoMethodError (undefined method `user_id' for #<Class:0x007fb002e9e490>):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:17:29 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 11.5ms)
+
+
+  
+NoMethodError (undefined method `user_id' for #<Medication::ActiveRecord_Relation:0x007fb006cf7250>):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:17:33 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 9.4ms)
+
+
+  
+NoMethodError (undefined method `user_ids' for #<Medication::ActiveRecord_Relation:0x007fb00343aea8>):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:18:51 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (3.1ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" ORDER BY "medications"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+No serializer found for resource: 2
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.09ms)
+Completed 200 OK in 65ms (Views: 7.4ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:19:28 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.7ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" ORDER BY "medications"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+No serializer found for resource: 2
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.09ms)
+Completed 200 OK in 54ms (Views: 8.9ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:19:44 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.4ms)[0m  [1m[34mSELECT  "medications".* FROM "medications" ORDER BY "medications"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "users".id FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 13.0ms)
+
+
+  
+NoMethodError (undefined method `user_id' for [2]:Array):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:20:04 +0000
+  
+SyntaxError (/Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/medications_controller.rb:7: syntax error, unexpected tIVAR, expecting '('
+    @medications = @medications
+                ^):
+  
+app/controllers/medications_controller.rb:7: syntax error, unexpected tIVAR, expecting '('
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:20:36 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 8.2ms)
+
+
+  
+NoMethodError (undefined method `user_ids' for #<Medication::ActiveRecord_Relation:0x007fb004474648>):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:25:43 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 15.5ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<MedicationsController:0x007fb00680bb10>
+Did you mean?  user_url):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:26:03 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<MedicationsController:0x007fb008525458>
+Did you mean?  user_url):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:26:42 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 9.4ms)
+
+
+  
+NameError (undefined local variable or method `user_ids' for #<MedicationsController:0x007fb00920a0d8>
+Did you mean?  user_url):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:26:59 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 8.8ms)
+
+
+  
+NoMethodError (undefined method `include?' for :user_ids:Symbol):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:27:57 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 8.1ms)
+
+
+  
+NoMethodError (undefined method `include' for :user_ids:Symbol):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:28:06 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 10.6ms)
+
+
+  
+NameError (undefined local variable or method `user_ids' for #<MedicationsController:0x007fb00357ec88>
+Did you mean?  user_url):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:28:39 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 7.9ms)
+
+
+  
+NoMethodError (undefined method `user_ids' for #<Class:0x007fb009220608>):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:28:49 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 8.7ms)
+
+
+  
+NameError (uninitialized constant MedicationsController::Medication_user_ids):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:29:08 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 8.3ms)
+
+
+  
+NoMethodError (undefined method `include' for #<MedicationsController:0x007fb003306fa0>):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:29:19 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 8.3ms)
+
+
+  
+TypeError (wrong argument type User (expected Module)):
+  
+app/controllers/medications_controller.rb:6:in `include'
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:29:31 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.7ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 18.6ms)
+
+
+  
+ArgumentError (#<User id: 1, first_name: "Steve", last_name: "Redgrave", email: "Steveredgrave@famousdiabetics.com", password_digest: "$2a$10$M.9YvEB42Uwh7cXK3U.exO/Bnew87/N2RpnEaCgoJAt...", ideal_bg: "5.5", created_at: "2017-02-22 19:04:03", updated_at: "2017-02-22 19:04:03"> was not recognized for preload):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:30:38 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 13.7ms)
+
+
+  
+ArgumentError (1 was not recognized for preload):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:39:20 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (1.3ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (72.32ms)
+Completed 200 OK in 101ms (Views: 77.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:39:22 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.6ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.55ms)
+Completed 200 OK in 27ms (Views: 9.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-23 02:39:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.9ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.28ms)
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:39:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.8ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (12.6ms)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-23 02:39:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (3.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (10.1ms)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-23 02:39:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.15ms)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:39:55 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.4ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.88ms)
+Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:42:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.6ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (125.35ms)
+Completed 200 OK in 206ms (Views: 119.9ms | ActiveRecord: 33.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:43:11 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 30.5ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x007fb003d10460>
+Did you mean?  ids):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:43:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 8.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:44:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 9.6ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Class:0x007fb003ce7ab0>
+Did you mean?  ids):
+  
+app/controllers/users_controller.rb:45:in `set_user'
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:44:53 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.4ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (30.17ms)
+Completed 200 OK in 77ms (Views: 25.4ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:44:56 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.58ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:44:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.3ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (7.7ms)
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-23 02:45:03 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from set_user at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:45)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from show at /Users/Jean-Marc/development/WDI_PROJECT_4_API/app/controllers/users_controller.rb:9)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mMedication Load (0.3ms)[0m  [1m[34mSELECT "medications".* FROM "medications" INNER JOIN "medications_users" ON "medications"."id" = "medications_users"."medication_id" WHERE "medications_users"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.36ms)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:48:29 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (1.7ms)[0m  [1m[34mSELECT "medications".* FROM "medications" WHERE "medications"."user_ids" = 1[0m
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 14.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_ids does not exist
+LINE 1: SELECT "medications".* FROM "medications" WHERE "medications...
+                                                        ^
+: SELECT "medications".* FROM "medications" WHERE "medications"."user_ids" = 1):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:50:08 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 13.7ms)
+
+
+  
+NoMethodError (undefined method `class_name' for nil:NilClass
+Did you mean?  class_eval):
+  
+app/controllers/medications_controller.rb:6:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:52:09 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (2.0ms)[0m  [1m[34mSELECT "medications".* FROM "medications" WHERE "medications"."user_ids" = 1[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column medications.user_ids does not exist
+LINE 1: SELECT "medications".* FROM "medications" WHERE "medications...
+                                                        ^
+: SELECT "medications".* FROM "medications" WHERE "medications"."user_ids" = 1):
+  
+app/controllers/medications_controller.rb:7:in `index'
+Started GET "/medications" for 127.0.0.1 at 2017-02-23 02:52:30 +0000
+Processing by MedicationsController#index as */*
+  Parameters: {"bg_result"=>3.2, "date"=>"2017-02-21", "time"=>"06:57:12", "medication"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMedication Load (0.5ms)[0m  [1m[34mSELECT "medications".* FROM "medications"[0m
+[active_model_serializers]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 1]]
+[active_model_serializers]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 2]]
+[active_model_serializers]   [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 3]]
+[active_model_serializers]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "medications_users" ON "users"."id" = "medications_users"."user_id" WHERE "medications_users"."medication_id" = $1[0m  [["medication_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.15ms)
+Completed 200 OK in 73ms (Views: 42.1ms | ActiveRecord: 14.1ms)
+
+

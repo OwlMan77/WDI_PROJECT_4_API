@@ -1,4 +1,7 @@
 class MedicationSerializer < ActiveModel::Serializer
-  attributes :id, :name
-  has_many :user_ids, through: :medications_users
+  attributes :id, :name, :patients
+
+  def patients
+    object.users.count
+  end
 end
